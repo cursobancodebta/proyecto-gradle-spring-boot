@@ -1,0 +1,38 @@
+## YAML Template.
+---
+databaseChangeLog:
+    - changeSet:
+        id: 3
+        author: jpramirezl
+        comment: "Insertar users en base de datos"
+        changes:
+         - insert:
+             tableName: user
+             columns:            
+             - column:
+                 name: login
+                 value: "juan"
+             - column:
+                 name: name
+                 value: "Juan Pablo"                   
+             - column:
+                 name: email
+                 value: "juan@google.com"             
+             - column:
+                 name: password
+                 value: "juan"
+         - insert:
+             tableName: user
+             columns:              
+             - column:
+                 name: login
+                 value: "jose"
+             - column:
+                 name: name
+                 value: "Jose Fernando"
+             - column:
+                 name: email
+                 value: "jose@google.com"             
+             - column:
+                 name: password
+                 value: "jose"             

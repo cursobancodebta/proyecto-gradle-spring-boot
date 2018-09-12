@@ -1,0 +1,34 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://udem.edu/bancodebogota/proyecto-gradle-spring-boot"
+           targetNamespace="http://udem.edu/bancodebogota/proyecto-gradle-spring-boot" elementFormDefault="qualified">
+
+    <xs:element name="getCiudadRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCiudadResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ciudad" type="tns:ciudad"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="ciudad">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="poblacion" type="xs:int"/>
+            <xs:element name="capital" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="capital">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SI"/>
+            <xs:enumeration value="NO"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

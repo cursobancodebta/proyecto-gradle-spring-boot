@@ -1,0 +1,49 @@
+## YAML Template.
+---
+databaseChangeLog:
+    - changeSet:
+        id: 1
+        author: jpramirez
+        changes:
+            - createTable:
+                tableName: user
+                columns:
+                    - column:
+                        name: id
+                        type: int
+                        autoIncrement: true
+                        constraints:
+                            primaryKey: true
+                            nullable: false
+                    - column:
+                        name: login
+                        type: varchar(255)                            
+                    - column:
+                        name: email
+                        type: varchar(255)
+                    - column:
+                        name: password
+                        type: varchar(255)
+                    - column:
+                        name: name
+                        type: varchar(255)
+                        
+    - changeSet:
+        id: 2
+        author: jpramirez
+        changes:
+            - createTable:
+                tableName: ciudad
+                columns:
+                    - column:
+                        name: nombre
+                        type: varchar(255)
+                        constraints:
+                            primaryKey: true
+                            nullable: false
+                    - column:
+                        name: poblacion
+                        type: int
+                    - column:
+                        name: capital
+                        type: varchar(10)

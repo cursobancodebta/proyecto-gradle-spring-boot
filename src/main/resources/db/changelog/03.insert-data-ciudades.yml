@@ -1,0 +1,30 @@
+databaseChangeLog:
+    - changeSet:
+        id: 4
+        author: jpramirezl
+        comment: "Insertar ciudades en base de datos"
+        changes:
+         - insert:
+             tableName: ciudad
+             columns:            
+             - column:
+                 name: nombre
+                 value: "Medellin"
+             - column:
+                 name: poblacion
+                 value: 30000000                   
+             - column:
+                 name: capital
+                 value: "SI"            
+         - insert:
+             tableName: ciudad
+             columns:            
+             - column:
+                 name: nombre
+                 value: "Sabaneta"
+             - column:
+                 name: poblacion
+                 value: 2000000                   
+             - column:
+                 name: capital
+                 value: "NO"    
